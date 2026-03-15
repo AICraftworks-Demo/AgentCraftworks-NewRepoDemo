@@ -4,20 +4,20 @@
 # Customize the paths and teams below to match your project.
 
 # Security-critical code → security scanner agent + human lead
-*.js              @agents/security-scanner @human-leads/security
-*.ts              @agents/security-scanner @human-leads/security
-package.json      @agents/security-scanner @human-leads/security
-package-lock.json @agents/security-scanner @human-leads/security
+*.js              @AICraftworks-Demo/security-scanner @AICraftworks-Demo/security-lead
+*.ts              @AICraftworks-Demo/security-scanner @AICraftworks-Demo/security-lead
+package.json      @AICraftworks-Demo/security-scanner @AICraftworks-Demo/security-lead
+package-lock.json @AICraftworks-Demo/security-scanner @AICraftworks-Demo/security-lead
 
 # Documentation → docs reviewer agent (autonomous)
-docs/**           @agents/docs-reviewer
-*.md              @agents/docs-reviewer
-README.md         @agents/docs-reviewer @human-leads/docs
+docs/**           @AICraftworks-Demo/docs-reviewer
+*.md              @AICraftworks-Demo/docs-reviewer
+README.md         @AICraftworks-Demo/docs-reviewer @AICraftworks-Demo/docs-lead
 
 # Infrastructure → humans-only (no agent writes without oversight)
-.github/**        @human-leads/platform
-infra/**          @human-leads/platform
-Dockerfile        @human-leads/platform
+.github/**        @AICraftworks-Demo/platform-lead
+infra/**          @AICraftworks-Demo/platform-lead
+Dockerfile        @AICraftworks-Demo/platform-lead
 
 # Catch-all → code reviewer agent + team leads
-*                 @agents/code-reviewer @human-leads/team
+*                 @AICraftworks-Demo/code-reviewer @AICraftworks-Demo/team-lead
